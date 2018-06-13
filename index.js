@@ -4,7 +4,7 @@ var bot = new Discord.Client();
 
 var prefix = '*';
 
-bot.login('NDUwOTk5NzQ3MjMxMDg4NjQw.De7ZyA.zssKmMwJRNcbzA2vpfdey9hi0h8');
+bot.login(process.env.TOKEN);
 
 bot.on("guildMemberAdd", member => {
     member.guild.channels.find("name", "accueil").send(`:arrow_forward: **${member.user.username}** a rejoint le serveur !`)
